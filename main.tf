@@ -19,7 +19,7 @@ resource "google_container_cluster" "primary" {
   }
 }
 resource "google_container_node_pool" "primary_nodes" {
-  name               = "default"
+  name               = "default-pool"
   location           = var.region
   cluster            = google_container_cluster.primary.name
   version            = var.k8s_version
